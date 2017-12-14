@@ -1,0 +1,12 @@
+<script type="text/javascript"
+        id="conga-client-profiler-playback"
+        data-recording-session="{{ session|json_encode|escape("html_attr") }}"
+        src="{{ webpack_asset("conga-client-profiler-playback") }}"></script>
+
+<h1>Session Playback</h1>
+
+<h3>{{ session.url.full }}</h3>
+
+<section id="playback">
+    <iframe id="conga-client-profiler"></iframe>
+</section>

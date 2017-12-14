@@ -1,0 +1,18 @@
+parameters:
+
+
+
+services:
+
+    profiler.client.listener.cors:
+        constructor: "@conga/framework-profiler-client:listener/CorsListener"
+        tags:
+          - { name: "app.pre_middleware", method: "onKernelRegisterMiddleware", priority: 0 }
+          - { name: "kernel.event", event: "kernel.pre_flight_request", method: "handleCorsHeader" }
+
+    profiler.client.security.authenticator.event_api:
+        constructor: "@conga/framework-profiler-client:security/EventApiAuthenticator"
+
+    profiler.client.security.provider.event_api:
+        constructor: "@conga/framework-profiler-client:security/EventApiProvider"
+        arguments: ["@service_container"]

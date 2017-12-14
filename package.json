@@ -1,0 +1,50 @@
+{
+  "name": "@conga/framework-profiler-client",
+  "version": "2.0.0-dev",
+  "description": "Conga.js client profiler bundle",
+  "directories": {
+    "test": "test"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/congajs/conga-client-profiler.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Anthony Matarazzo",
+    "email": "email@anthonymatarazzo.com"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@conga/framework": "^2.0.0",
+    "@conga/framework-security": "^2.0.0",
+    "@conga/framework-session": "^2.0.0",
+    "@conga/framework-profiler": "congajs/conga-profiler",
+    "@conga/framework-webpack": "congajs/conga-webpack"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "lz-string": "^1.4.0",
+    "multer": "^1.3.0",
+    "mutation-summary": "^0.1.1",
+    "useragent": "^2.2.1"
+  },
+  "devDependencies": {
+    "@conga/framework": "^2.0.0",
+    "@conga/framework-security": "^2.0.0",
+    "@conga/framework-bass": "^2.0.0",
+    "@conga/framework-profiler": "congajs/conga-profiler",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "webpack": "^3.5.5",
+    "webpack-hot-middleware": "^2.18.2",
+    "bass-nedb": "latest",
+    "jasmine": "^2.6.0",
+    "request": "^2.81.0",
+    "should": "^11.2.1"
+  },
+  "readmeFilename": "README.md"
+}

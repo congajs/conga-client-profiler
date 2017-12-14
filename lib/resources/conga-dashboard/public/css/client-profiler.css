@@ -1,0 +1,144 @@
+#client-profiler #session-overview header {
+    padding-bottom: 30px;
+}
+
+#client-profiler #session-overview header .columns {
+    margin-left: 0;
+}
+
+#client-profiler #session-overview header .icon-text {
+    padding-left: 10px;
+}
+
+#client-profiler #session-overview section.content > p:first-child {
+    margin-left: 10px;
+}
+
+#client-profiler #session-overview .message.is-danger .message-body {
+    overflow: auto;
+}
+
+#client-profiler #session-overview table tbody tr td {
+    font-size: 0.85rem;
+}
+#client-profiler #session-overview table tbody tr td.url {
+    width: 75%;
+    word-break: break-all;
+}
+
+
+
+
+
+
+
+#client-profiler #session-waterfall #event-filter ul {
+    margin: 0;
+    padding: 0;
+}
+#client-profiler #session-waterfall #event-filter li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    width: 200px;
+}
+#client-profiler #session-waterfall #event-filter #node-names li {
+    width: 130px;
+}
+#client-profiler #session-waterfall #event-filter label {
+    cursor: pointer;
+}
+#client-profiler #session-waterfall #event-filter label span {
+    padding-bottom: 3px;
+}
+#client-profiler #session-waterfall #event-filter label:hover span {
+    font-weight: bold;
+}
+
+#client-profiler #session-waterfall table tbody tr td {
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+#client-profiler #session-waterfall table tbody tr.event-information td {
+    cursor: inherit;
+}
+
+#client-profiler #session-waterfall table tbody tr td.duration,
+#client-profiler #session-waterfall table tbody tr td.memory,
+#client-profiler #session-waterfall table tbody tr td.date {
+    white-space: nowrap;
+}
+#client-profiler #session-waterfall table tbody tr td.memory .icon {
+    display: inline;
+}
+#client-profiler #session-waterfall table tbody tr td .event-info {
+    display: inline-block;
+    white-space: normal;
+    word-break: break-all;
+    color: #AAAAAA;
+    position: relative;
+    z-index: 2;
+}
+#client-profiler #session-waterfall table tbody tr td .event-info:hover {
+    color: #000000;
+}
+
+#client-profiler #session-waterfall table thead tr th {
+    border-bottom: 0;
+    margin-bottom: 15px;
+}
+
+#client-profiler #session-waterfall table tbody tr td.timeline .timeline-marker {
+    background-color: lightgrey;
+}
+
+#client-profiler #session-waterfall #event-filter label.dom:hover span {
+    color: green;
+}
+#client-profiler #session-waterfall table tbody tr.dom td.timeline .timeline-marker {
+    background-color: green;
+}
+
+#client-profiler #session-waterfall #event-filter label.error:hover span {
+    color: darkred;
+}
+#client-profiler #session-waterfall table tbody tr.error td.timeline .timeline-marker {
+    background-color: darkred;
+}
+
+#client-profiler #session-waterfall #event-filter label.xhr:hover span {
+    color: green;
+}
+#client-profiler #session-waterfall table tbody tr.xhr td.timeline .timeline-marker {
+    background-color: darkorange;
+}
+
+
+#client-profiler #session-waterfall table tbody tr.is-new-page {
+    background-color: #179292;
+    color: #ffffff;
+}
+#client-profiler #session-waterfall table tbody tr.is-new-page .event-info,
+#client-profiler #session-waterfall table tbody tr.is-new-page .event-info:hover {
+    color: #ffffff;
+}
+#client-profiler #session-waterfall table tbody tr.is-new-page td.timeline .timeline-marker {
+    background-color: #ffffff;
+}
+
+
+#client-profiler #session-waterfall table td.timeline {
+    position: relative;
+    width: 100%;
+}
+#client-profiler #session-waterfall table td.timeline .timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    min-width: 2px;
+    opacity: .35;
+}
+
+#client-profiler #session-waterfall table td.timeline .information {
+    display: none;
+}

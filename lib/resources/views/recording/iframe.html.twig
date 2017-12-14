@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Conga Client Profiler Worker Bridge</title>
+        <script type="text/javascript">
+            (function(window, MessageEvent, Worker) {
+                var worker = new Worker("{{ webpack_asset('conga-client-profiler-worker', 'js') }}");
+//                worker.onmessage = function (evt) {
+//                    window.postMessage(JSON.parse(JSON.stringify(new MessageEvent('worker.message', evt))), '*');
+//                };
+//                worker.onerror = function (err) {
+//                    window.postMessage(JSON.parse(JSON.stringify(new MessageEvent('worker.error', {data: {error: err}}))), '*');
+//                };
+                window.addEventListener('message', evt => {
+                    // TODO: check evt.origin
+                    if (evt.data === 'worker.terminate') {
+                        worker.terminate();
+                        return;
+                    }
+                    worker.postMessage(evt.data);
+                });
+            }(window, MessageEvent, Worker));
+        </script>
+    </head>
+    <body></body>
+</html>
