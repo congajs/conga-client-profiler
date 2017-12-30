@@ -1,5 +1,7 @@
 parameters:
 
+    profiler.client.security.authenticator.event_api.class: "@conga/framework-profiler-client:security/EventApiAuthenticator"
+    profiler.client.security.provider.event_api.class: "@conga/framework-profiler-client:security/EventApiProvider"
 
 
 services:
@@ -11,8 +13,12 @@ services:
           - { name: "kernel.event", event: "kernel.pre_flight_request", method: "handleCorsHeader" }
 
     profiler.client.security.authenticator.event_api:
-        constructor: "@conga/framework-profiler-client:security/EventApiAuthenticator"
+        constructor: "%profiler.client.security.authenticator.event_api.class%"
 
     profiler.client.security.provider.event_api:
-        constructor: "@conga/framework-profiler-client:security/EventApiProvider"
+        constructor: "%profiler.client.security.provider.event_api.class%"
+        arguments: ["@service_container"]
+
+    profiler.client:
+        constructor: "@conga/framework-profiler-client:service/ClientProfilerService"
         arguments: ["@service_container"]

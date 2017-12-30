@@ -59,6 +59,9 @@
     cursor: pointer;
     font-size: 0.85rem;
 }
+#client-profiler #session-waterfall table tbody tr td:first-child {
+    white-space: nowrap;
+}
 #client-profiler #session-waterfall table tbody tr.event-information td {
     cursor: inherit;
 }
@@ -113,6 +116,13 @@
     background-color: darkorange;
 }
 
+#client-profiler #session-waterfall table tbody tr.is-page-overlap .timeline .event-info {
+    display: block;
+}
+#client-profiler #session-waterfall table tbody tr.is-page-overlap .timeline .event-info .icon {
+    position: relative;
+    right: 0;
+}
 
 #client-profiler #session-waterfall table tbody tr.is-new-page {
     background-color: #179292;
